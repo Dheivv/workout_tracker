@@ -61,7 +61,7 @@ def animateImg(ind):
     canvas.grid(column=0, row=1, columnspan=3)
     window.after(100, animateImg, ind)
 
-def rememberMe():
+def turnOnOffRememberMe():
     
     global remember_me, n_clicks
     
@@ -335,7 +335,7 @@ query_label.grid(column=0, row=5)
 weight_label = Label(text='Your weight in kgs (e.g.: 70):')
 weight_label.grid(column=0, row=6)
 
-height_label = Label(text='Your height in cms (e.g.: 176):')
+height_label = Label(text='Your height in cms (e.g.: 180):')
 height_label.grid(column=0, row=7)
 
 age_label = Label(text='Your age (e.g.: 25):')
@@ -374,7 +374,7 @@ if AGE and len(AGE) > 0:
 remember_me_btn = Checkbutton(
     text='Remember me',
     activeforeground='red', 
-    command=rememberMe
+    command=turnOnOffRememberMe
 )
 remember_me_btn.grid(column=0, row=9)
 
